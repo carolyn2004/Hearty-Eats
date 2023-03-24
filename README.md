@@ -10,9 +10,9 @@
   - User can save restaurants they like by adding it to favorites, they can also delete from favorites.
   - User can view and edit their profile details including profile picture. 
   - Users can also visit the about page to learn more about the restaurant reservation website.
-  - Admin user can add reservation timing slots for users to book.
-  - Admin user can also delete reservation timing slots from selected resstaurant.
-  - Password is needed to enter admin portal (Lambda Authorizer).
+  - Admin user can add reservation timing slots for users to book (Lambda Authorizer).
+  - Admin user can also delete reservation timing slots from selected resstaurant (Lambda Authorizer).
+  - Password is needed to enter admin portal. After accessing the admin portal they will need to enter another password in order to add slots and delete slots.
   
   ![image](https://user-images.githubusercontent.com/100062535/227495727-2402bbc5-54ff-4f7f-bdae-58a32107b29f.png)
   ![image](https://user-images.githubusercontent.com/100062535/227495917-376f4c23-010e-4e45-a1d4-e72fd63ca063.png)
@@ -24,6 +24,11 @@
   ![image](https://user-images.githubusercontent.com/100062535/227496800-b2b40d36-543c-44e0-baff-f90314d426d9.png)
   ![image](https://user-images.githubusercontent.com/100062535/227496887-d34e96ce-0c55-44d0-9c2e-aefd82034e9b.png)
   ![image](https://user-images.githubusercontent.com/100062535/227497239-2b6301e5-2413-4365-b246-3d4f1fe05ac2.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227502822-6a0eef6e-8fd7-48e0-a9c8-e288ab749d31.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227503280-8d315db9-6dbc-43b3-a2cd-032fb81c41f1.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227503337-ac76459c-fbaa-486f-99bb-85ee29dae23f.png)
+
+
 
 
 
