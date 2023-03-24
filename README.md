@@ -9,6 +9,7 @@
   - User can make a reservation, view their reservations and delete their reservations. 
   - User can save restaurants they like by adding it to favorites, they can also delete from favorites.
   - User can view and edit their profile details including profile picture. 
+  - Users can also visit the about page to learn more about the restaurant reservation website.
   
   ![image](https://user-images.githubusercontent.com/100062535/227495727-2402bbc5-54ff-4f7f-bdae-58a32107b29f.png)
   ![image](https://user-images.githubusercontent.com/100062535/227495917-376f4c23-010e-4e45-a1d4-e72fd63ca063.png)
