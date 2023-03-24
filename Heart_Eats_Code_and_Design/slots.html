@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/c40c131336.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/ms1-users-bookings.js"></script>
+    <script src="js/ms2-restaurant-info-avail-slots.js"></script>
+    <title>Slot Management</title>
+    <style>
+        Body {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color:#f5e6d1;
+            color: black;
+            overflow-x: hidden
+
+
+
+        }
+
+        button {
+            background-color: #8d4843;            width: 100%;
+            color: black;
+            padding: 15px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 0.8px solid lightgray;
+            box-sizing: border-box;
+            color: black;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+        label{
+            font-size: medium;
+        }
+
+
+        .container1 {
+            padding: 25px;
+            border-radius: 2rem;
+            width: fit-content;
+            margin-left: 35rem;
+            margin-top: 5rem;
+            
+        }
+        label {
+            font-size: small;
+        }
+        table.table-bordered{
+    border:1px solid black;
+    margin-top:20px;
+  }
+table.table-bordered > thead > tr > th{
+    border:1px solid black;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid black;
+}
+    .fa-trash{
+        color: #a52a2a;
+    }
+    .fa-trash:hover{
+        color: black;
+    }
+    </style>
+</head>
+
+<body onload="checkAdminLogin();setNavBar(); getAllSlots();">
+    <nav style="background-color: #ff914d; border: none;" class="navbar navbar-inverse">
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#alignment-example" aria-expanded="false">
+
+                </button>
+                <img class="navbar-brand" src="images/logo.jpg" style="width: 50px; height: 50px; padding: 0%;"
+                    href="index.html">
+            </div>
+
+            <!-- Navbar -->
+            <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+                class="collapse navbar-collapse" id="alignment-example">
+
+                <!-- Links -->
+                <ul class="nav navbar-nav">
+                    <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="index.html">Hearty
+                            Eats</a></li>
+
+                </ul>
+
+                <!-- Search -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="about.html"><span
+                                class="fa-question fa-solid"></span>About</a></li>
+                    <li id="login"><a style="background-color: #ff914d; color: white; font-size: 20px;" href="login.html"><span
+                                class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
+                    <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="register.html"><span
+                                class="fa-pencil fa-solid"></span>Register</a></li>
+                                <li id="navUser"><a style="background-color: #ff914d; color: white; font-size: 20px;" href="profile.html"><span
+                                    class="fa-user-circle fa-solid" ></span>Profile</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div>
+        <h1 style="text-align:left; margin-top: 4rem; margin-bottom: 1rem; margin-left: 34.5rem;">Slot management system</h1>
+    </div>
+  <div id="slotForm">
+    <form style="margin-top: -5rem; margin-left: -3rem;">
+        
+        <div class="container1">
+            <label>Restaurant Name : </label><br>
+            <input type="text" style="width: 205%;" placeholder="Enter Restaurant Name" name="restaurant_name_slot"  id="restaurant_name_slot" required>
+            <label>Restaurant Name, Date and Time </label><br>
+            <input type="text" style="width: 205%;" placeholder="Enter Restaurant, Name, Date and Time" name="date_time_slot"  id="date_time_slot" required><br>
+            <label>Number of Pax </label><br>
+            <input type="text" style="width: 205%;" placeholder="Enter Number of Pax" name="number_of_pax_2"  id="number_of_pax_2" required><br>
+            <label>Access token </label><br>
+            <input type="password" style="width: 205%;" placeholder="Enter Access Token" name="access_token"  id="access_token" required>
+            <button type="button" style="color: white; font-size: small; width: 205%;" onclick="addSlots()">Add slot</button>
+
+        </div>
+    </form>
+    <br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray; width: 90%;">
+    <br><br>
+    <div id="tableSlots">
+    <table class="table table-bordered" style="width: 120rem; margin-left: 15rem;">
+        <thead>
+        <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        <tr>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        </tr>
+        <tr>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        </tr>
+        <tr>
+        <td>Cell</td>
+        <td>Cell</td>
+        <td>Cell</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    <!-- About -->
+    <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+        class="container-fluid about">
+        <div class="row">
+            <div class="col-md-2 offset-md-2">
+                <h1>HEARTY EATS<h1>
+            </div>
+            <div class="col-md-6 justifytext" style="font-size:medium;">Hearty Eats is a restaurant reservation website created to provide
+                customers with a fuss free dining experience. Book a restaurant anytime, anywhere. Choose a restaurant,
+                select a date and time, and you're good to go!</div>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer  style="font-size:medium;color:black; margin-bottom: 0; padding-bottom: 0; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> <small>&copy; Copyright
+            2023, Hearty Eats</small> </footer>
+     
+</body>
+
+</html>

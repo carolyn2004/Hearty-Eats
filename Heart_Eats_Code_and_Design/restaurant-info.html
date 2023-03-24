@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Information</title>
+    <!-- Bootstrap CSS -->
+    <script src="https://kit.fontawesome.com/c40c131336.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/ms1-users-bookings.js"></script>
+    <script src="js/ms2-restaurant-info-avail-slots.js"></script>
+    <script src="js/ms3-favorites.js"></script>
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Required scripts -->
+    <!-- <script src="scripts/login_signup.js"></script>
+    <script src="scripts/restaurant_filters.js"></script>
+    <script src='scripts/restaurant_display.js'></script> -->
+
+</head>
+<style>
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+  
+}
+</style>
+<body onload="setNavBar(); getOneRestaurant(); getOneRestaurantSlots()" style="background-color:#f5e6d1" >
+<nav style="background-color: #ff914d; border: none;" class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <!-- Logo -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#alignment-example" aria-expanded="false">
+
+            </button>
+            <img class="navbar-brand" src="images/logo.jpg" style="width: 50px; height: 50px; padding: 0%;"
+                href="index.html">
+        </div>
+
+        <!-- Navbar -->
+        <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+            class="collapse navbar-collapse" id="alignment-example">
+
+            <!-- Links -->
+            <ul class="nav navbar-nav">
+                <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="index.html">Hearty
+                        Eats</a></li>
+
+            </ul>
+
+            <!-- Search -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="about.html"><span
+                            class="fa-question fa-solid"></span>About</a></li>
+                <li id="login"><a style="background-color: #ff914d; color: white; font-size: 20px;" href="login.html"><span
+                            class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
+                <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="register.html"><span
+                            class="fa-pencil fa-solid"></span>Register</a></li>
+                            <li id="navUser"><a style="background-color: #ff914d; color: white; font-size: 20px;" href="profile.html"><span
+                                class="fa-user-circle fa-solid" ></span>Profile</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+<div id="restaurantinfo">
+<div>
+    <img  id="res_image" src="images/restaurant_image.jpg"
+        style="padding: 0 5% 0 5%; display: block; margin-left: auto; margin-right: auto; width: 88%; height: 500px; object-fit: cover;">
+    </div>
+
+    <div id='restaurant_details' class='container featured-box' style="padding-bottom: 15%;">
+        <h1 id='res_name' style="width: 500px;">Paradise Dynasty</h1>
+        <div style="padding-bottom: 50px; margin-bottom: -5rem;">
+            <span id='res_badge' style="background-color: #debc99; color: white;"
+                class="badge badge-secondary float-left">
+                <div id='res_cuisine' style="font-size:medium;"> cuisine </div>
+            </span>
+            <div class="line"> </div>
+        </div>
+
+        <div class="line" style="margin-top: 20px;margin-bottom: -5rem;">
+            <!-- Booking button -->
+            <button type="button" id="btn_review" class="btn btn-primary"
+                style="background-color: #8d4843; border: none;" data-toggle="modal" data-target="#bookingForm">
+
+            <!-- Favourite button -->
+            <div style="padding-left: 20px; display: inline;">
+                <button type="button" id="btn_favourite" class="btn btn-primary"
+                    style="background-color: #8d4843; border: none;" onclick="add_or_delete_favourites()">
+                    <i class="fa-bookmark fa-solid"></i> Add to Favourites </button>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="card" style="width: 16rem; position: absolute; margin-left: 680px; margin-top: 29rem;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8044015853056!2d103.84849421457254!3d1.291730299057867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1906a118096b%3A0xe0a3c90f34946b3c!2sParadise%20Dynasty%20at%20Funan!5e0!3m2!1sen!2ssg!4v1673604876626!5m2!1sen!2ssg"
+                width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- About section -->
+        <div style="margin-top: 80px; width: 100rem;font-size: medium; font-weight:lighter;">
+            <p id='description'
+                style="width: 1100px; border-bottom: 1px solid black; border-style: solid; border-top: none; border-left: none; border-right: none; padding-bottom: 20px; ">
+                Dining at Paradise Dynasty is akin to taking a step back to imperial China. Marvel at the opulence and
+                majesty of the restaurant settings while immersing yourself in the finest of northern and southern China
+                cuisine.
+
+                Touted as a world-first, Paradise Dynasty is proud to present eight first-of-its-kind legendary xiao
+                long bao with flavours such as original, luffa gourd, foie gras, black truffle, crab roe, cheese, garlic
+                and Szechuan. Accompanying these flavourful delicacies are Spicy Szechuan Crispy Chicken, Poached Sliced
+                Fish in Szechuan Chilli Oil, silky La Mian, hot and cold appetisers and a variety of seafood, vegetable
+                and rice dishes.
+
+                Dine against a backdrop of luxury and grandeur befitting for kings – be wowed by the plush dining
+                ambience and customised imperial court lamp chandeliers that are intricately designed to capture the
+                bygone eras of Imperial China in a contemporary fashion. But never judge a book by its cover, for
+                Paradise Dynasty promises to couple great food with great value in a grand alluring ambience.</p>
+
+        </div>
+
+        <!-- Restaurant Information -->
+        <div
+            style="width: 600px; height: 400px; border-bottom: 1px solid black;  border-style: solid; border-top: none; border-left: none; border-right: none; margin-bottom: -100px; ">
+
+            <h2 style="color: #ff914d; font-size: x-large;">Address</h2>
+            <p style="font-size: medium;">
+                435 Orchard Rd, #01-18 Wisma Atria, Singapore 238877435 Orchard Rd, #01-18 Wisma Atria, Singapore 238877
+            </p>
+            <h2 style="color: #ff914d; font-size: x-large;"> Contact Details</h2>
+            <p style="font-size: medium;">+65 6487 6489</p>
+            <h2 style="color: #ff914d; font-size: x-large;">Operating hours</h2>
+            <p style="font-size: medium;">Mondays to Fridays 9am to 6pm</p>
+
+        </div>
+        
+
+    </div>
+</div>
+<div style="margin-left: 19rem;">
+<h1>Restaurant booking</h1>
+<h4 style="margin-top: -1rem;">Select one of the available slots, enter in your phone number and press 'Make Booking'.</h4><br>
+</div>
+<div id="bookingForm1">
+<!-- <form style="margin-left: 15rem;">
+    <label for="rname">Restaurant Name:</label><br>
+    <input type="text" id="rname" name="rname" value="Paradise Dynasty"><br>
+    <label for="slots">Restaurant Name, Date and Time:</label><br>
+<select id="slots">
+  <option value="restaurant_name">Paradise Dynasty</option>
+</select><br>
+    <label for="Contact Number">Contact Number</label><br>
+    <input type="text" id="Contact Number"><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>  -->
+</div>
+    <!-- About -->
+    <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+        class="container-fluid about">
+        <div class="row">
+            <div class="col-md-2 offset-md-2">
+                <h1>HEARTY EATS<h1>
+            </div>
+            <div class="col-md-6 justifytext" style="font-size:medium;">Hearty Eats is a restaurant reservation website
+                created to provide
+                customers with a fuss free dining experience. Book a restaurant anytime, anywhere. Choose a restaurant,
+                select a date and time, and you're good to go!</div>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer
+        style="font-size:medium;color:black; margin-bottom: 0; padding-bottom: 0; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <small>&copy; Copyright
+            2023, Hearty Eats</small>
+    </footer>
+  
+</body>
+<!-- <div class="modal fade" id="bookingForm" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" style="color: #8d4843; font-size:x-large;">Make a Booking </h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <div class="col-sm">
+                  <form>
+                    <input type="text" style="margin-left: 50px; width: 500px; font-size:medium; height: 30px; margin-top: 20px;"  value="Paradise Dynasty" disabled name="Restaurant Name">
+                    <select id="slotoption" style="margin-left: 50px; margin-top: 20px; font-size:medium; width: 500px; height: 30px;"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Restaurant Name, Date & Time</option>
+                        <option value="1">5.15 P.M.</option>
+                        <option value="2">6.15 P.M.</option>
+                        <option value="3">8.15 P.M.</option>
+                      </select>
+                     
+                      <select style="margin-left: 50px; width: 500px; font-size:medium; height: 30px; margin-top: 20px;"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Number of pax</option>
+                        <option value="1">2 Adults</option>
+                        <option value="2">4 Adults</option>
+                        <option value="3">2 Adults 2 Children</option>
+                      </select>
+                      <input type="text" style="margin-left: 50px; width: 500px; font-size:medium; height: 30px; margin-top: 20px;"  placeholder="Contact Number" name="Contact">
+                     
+                      
+                      
+                  </form>
+              </div>
+          </div>
+          <div class="row">
+              
+          </div>
+        </div>
+        <div style="margin-top: -5rem;"class="modal-footer">
+          <button type="button" style="background-color: #debc99;" class="btn btn-warning" data-dismiss="modal">Close</button>
+          <button type="button"style="background-color: #debc99"; class="btn btn-warning" onclick="makeBooking()">Book Now!</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+</html>
+<!-- Booking Modal -->

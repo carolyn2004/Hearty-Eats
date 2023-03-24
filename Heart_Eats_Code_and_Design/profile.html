@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <title>Profile</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c40c131336.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="js/ms1-users-bookings.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- <script src="js/common.js"></script>
+    <script src="js/ms1-users.js"></script>
+    <script src="js/ms2-companies-jobs.js"></script>
+    <script src="js/ms3-applications.js"></script> -->
+</head>
+
+<!-- <body onload="setNavBar();fillProfile();getAppliedJobs();"> -->
+
+
+<style>
+    input::placeholder {
+    font-size: x-small;
+    
+}
+label{
+    font-size: medium;
+}
+Body {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color:#f5e6d1;
+            color: black;
+       overflow-x: hidden
+
+
+        }
+
+        button {
+            background-color: #8d4843;
+            width: 94%;
+            height: 4rem;
+            color: white;
+            padding: 15px;
+            margin: 10px 0px;
+            margin-left: 1.8rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+       
+
+       
+</style>
+<body onload="setNavBar(); fillProfile1()">
+<!-- Navigation -->
+<nav style="background-color: #ff914d; border: none;" class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <!-- Logo -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#alignment-example" aria-expanded="false">
+
+            </button>
+            <img class="navbar-brand" src="images/logo.jpg" style="width: 50px; height: 50px; padding: 0%;"
+                href="index.html">
+        </div>
+
+        <!-- Navbar -->
+        <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+            class="collapse navbar-collapse" id="alignment-example">
+
+            <!-- Links -->
+            <ul class="nav navbar-nav">
+                <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="index.html">Hearty
+                        Eats</a></li>
+
+            </ul>
+
+            <!-- Search -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="about.html"><span
+                            class="fa-question fa-solid"></span>About</a></li>
+                <li id="login"><a style="background-color: #ff914d; color: white; font-size: 20px;" href="login.html"><span
+                            class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
+                <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="register.html"><span
+                            class="fa-pencil fa-solid"></span>Register</a></li>
+                            <li id="navUser"><a style="background-color: #ff914d; color: white; font-size: 20px;" href="profile.html"><span
+                                class="fa-user-circle fa-solid" ></span>Profile</a></li>
+                                <li id="navAdmin"><a style="background-color: #ff914d; color: white; font-size: 20px;" href="admin.html"><span
+                                    class="fa-file-pen fa-solid" ></span>Admin</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div>
+    <h1 style="text-align:center; margin-top: 3rem; margin-left:30.3rem; margin-bottom: 0rem; color: black; background-color: #debc99; width: 92rem;">Profile</h1>
+</div>
+<div class="col-3">
+    
+    <div style="margin-top: 0rem; margin-left: 0rem; width: 30%;"class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active"  type="button" role="tab" href="bookings.html" aria-controls="v-pills-applications" aria-selected="false"><span class="fa-sharp fa-solid fa-utensils"></span>User's Bookings</a>
+        
+
+    </div>
+    <div style="margin-top: 2rem; margin-left: 0rem; width: 30%;"class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" type="button" role="tab" href="favorites.html"aria-controls="v-pills-applications" aria-selected="false"><span class="fa-bookmark fa-solid"></span>User's Favorites</a>
+        
+
+    </div>
+    <div style="height: 38rem;">
+
+    </div>
+   
+    <!-- Profile -->
+
+    <div class="container" id="userList" style="border: 10rem;">
+    <div class="row" style="margin-top: -40rem; margin-bottom: 5rem;  margin-right: -44rem;">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" style ="border-radius:50% ;" width="150px" src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg"></div>
+            <form id="imageProfile">
+                <input type="file" id="imageUploader" accept="image/*">
+              </form>
+        </div>
+        <div class="col-md-5 border-right">
+            <form>
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <!-- <h4 class="text-right">Profile Settings</h4> -->
+                </div>
+                
+                <div class="row mt-2">
+                    <div class="col-md-6"><label style="padding-top: 0.5rem;" class="labels">Name</label><input required id="name2" type="text" class="form-control" placeholder="Enter Name" value=""></div>
+                    <div class="col-md-6"><label style="padding-top: 0.5rem;" class="labels">Username</label><input required id="user_name2" type="text" class="form-control" value="" placeholder="Enter Username"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label style="padding-top: 0.5rem;" class="labels">Mobile Number</label><input id="mobile_number2" type="text" class="form-control" placeholder="Enter Phone Number" value=""></div>
+                    <label style="margin-left:1.5rem; padding-top: 0.5rem;">Gender</label>
+                    <div style="margin-left: 1rem;"class="col-md-12"><input type="radio" class="form-check-input" id="genderMale" name="gender"> Male</div>
+                    <div style="margin-left: 1rem;"class="col-md-12"><input type="radio" class="form-check-input" id="genderFemale" name="gender" > Female</div>
+                    <div class="col-md-12"><label style="padding-top: 0.5rem;" class="labels">Email</label><input required id="email2" type="text" class="form-control" placeholder="Enter Email" value=""></div>
+                    <div class="col-md-12"><label style="padding-top: 0.5rem;" class="labels">Password</label><input  required type="password" id="password2" class="form-control" placeholder="Enter Password" value=""></div>
+                    <button type="button" style="color: white; font-size: small;" onclick="updateProfile()">Save Changes</button>
+                    <div class="col-md-12"; style="margin-top: 1rem; ;"><label style="padding-top: 1rem" class="labels">Are you sure you want to delete your account?
+                    This action is irreversible</label></div>
+                    <button type="button" style="color: white; font-size: small;" onclick="deleteAccount();">Delete Account</button>
+
+                </div>
+                </div>
+            </form>
+                
+                  </div> 
+                        
+            </div>
+        </div>
+        
+    
+
+
+<br><br>
+<!-- About -->
+<div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+class="container-fluid about">
+<div class="row">
+    <div class="col-md-2 offset-md-2">
+        <h1>HEARTY EATS<h1>
+    </div>
+    <div class="col-md-6 justifytext" style="font-size:medium;">Hearty Eats is a restaurant reservation website created to provide
+        customers with a fuss free dining experience. Book a restaurant anytime, anywhere. Choose a restaurant,
+        select a date and time, and you're good to go!</div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer  style="font-size:medium;color:black; margin-bottom: 0; padding-bottom: 0; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> <small>&copy; Copyright
+    2023, Hearty Eats</small> </footer>
+
+    
+</body>

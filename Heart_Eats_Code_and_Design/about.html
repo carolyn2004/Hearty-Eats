@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/c40c131336.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/ms1-users-bookings.js"></script>
+
+    <title>About</title>
+    <style>
+        Body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #f5e6d1;
+            color: black;
+            padding: auto;
+            scrollbar-width: none;
+
+
+        }
+
+        button {
+            background-color: #8d4843;
+            width: 100%;
+            color: black;
+            padding: 15px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 0.8px solid lightgray;
+            box-sizing: border-box;
+            color: black;
+            font-weight: bold;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        label {
+            font-size: medium;
+        }
+
+
+        .container1 {
+            padding: 25px;
+            border-radius: 2rem;
+            width: fit-content;
+            margin-left: 35rem;
+            margin-top: 5rem;
+
+        }
+
+        label {
+            font-size: small;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body onload="setNavBar()">
+    <nav style="background-color: #ff914d; border: none;" class="navbar navbar-inverse">
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#alignment-example" aria-expanded="false">
+
+                </button>
+                <img class="navbar-brand" src="images/logo.jpg" style="width: 50px; height: 50px; padding: 0%;"
+                    href="index.html">
+            </div>
+
+            <!-- Navbar -->
+            <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+                class="collapse navbar-collapse" id="alignment-example">
+
+                <!-- Links -->
+                <ul class="nav navbar-nav">
+                    <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="index.html">Hearty
+                            Eats</a></li>
+
+                </ul>
+
+                <!-- Search -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="about.html"><span
+                                class="fa-question fa-solid"></span>About</a></li>
+                    <li id="login"><a style="background-color: #ff914d; color: white; font-size: 20px;" href="login.html"><span
+                                class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
+                    <li><a style="background-color: #ff914d; color: white; font-size: 20px;" href="register.html"><span
+                                class="fa-pencil fa-solid"></span>Register</a></li>
+                                <li id="navUser"><a style="background-color: #ff914d; color: white; font-size: 20px;" href="profile.html"><span
+                                    class="fa-user-circle fa-solid" ></span>Profile</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div>
+        <h1 style="text-align:center">About</h1>
+    </div>
+    <!-- Information -->
+    <div class="container" style="margin-right: 170px;">
+        <div class="row">
+            <div class="col-sm-4">
+
+                <div style="margin-top: 2rem;"> <img src="images/about.jpg" width="350px">
+
+                </div>
+
+
+            </div>
+            <div class="col-sm-8">
+                <p style="font-size: medium; margin-top: 3rem;">Hearty Eats is a restaurant reservation website created to provide customers with a fuss free dining
+                    experience. Book a restaurant anytime, anywhere. Choose a restaurant, select a date and time, and
+                    you're good to go!</h2>
+                <p>
+                    
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1 style="text-align:center">Frequently asked questions</h1>
+    </div>
+    <div class="container" style="margin-right: 170px;">
+        <div class="row">
+            <div class="col-sm-4">
+
+                <div style="margin-top: 2rem;"> <img src="images/about2.jpg" width="350px">
+
+                </div>
+
+
+            </div>
+            <div class="col-sm-8">
+                <h2 style="color: #8d4843;">Is it free to book a table using Hearty Eats?</h2>
+                <p style="font-size: medium;">
+                    Using Hearty Eats is completely free! That means diners can book a table at no cost.
+                </h2>
+                <p>
+                    <h2 style="color: #8d4843;">How do I cancel my booking?</h2>
+                <p style="font-size: medium;">
+                    Go to your profile. There will be an option to view all the bookings you have made so far. From there, you can choose to cancel your reservation. 
+                </h2>
+                <p>
+                    <h2 style="color: #8d4843;">Who can I contact if I have queries or issues?</h2>
+                <p style="font-size: medium;">
+                    You may contact us at us by calling our landline+65 1234 5678. Alternatively, you can drop us an email support@heartyeats.com. We will do our best to serve you to the best of our abilities.
+
+                </h2>
+                <p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <!-- About -->
+    <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+        class="container-fluid about">
+        <div class="row">
+            <div class="col-md-2 offset-md-2">
+                <h1>HEARTY EATS<h1>
+            </div>
+            <div class="col-md-6 justifytext" style="font-size:medium;">Hearty Eats is a restaurant reservation website
+                created to provide
+                customers with a fuss free dining experience. Book a restaurant anytime, anywhere. Choose a restaurant,
+                select a date and time, and you're good to go!</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+        style="font-size:medium;color:black; margin-bottom: 0; padding-bottom: 0; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <small>&copy; Copyright
+            2023, Hearty Eats</small>
+    </footer>
+
+</body>
+
+</html>
