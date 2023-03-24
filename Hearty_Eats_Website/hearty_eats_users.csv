@@ -1,0 +1,4 @@
+user_name,email,file_key,gender,mobile_number,name,password
+john123,john@gmail.com,,Male,12345678,john,123
+mary123,mary@gmail.com,,Female,12345678,mary,123
+carolyn123,c@gmail.com,https://s3.amazonaws.com/uploading-image-bucket/carolyn123.png,Male,12345678,"""Carolyn """,123

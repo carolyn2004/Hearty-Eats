@@ -1,0 +1,506 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "hearty_eats_http_api",
+    "version" : "2023-02-08 04:50:37UTC"
+  },
+  "servers" : [ {
+    "url" : "https://aba3bnzddd.execute-api.us-east-1.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : ""
+      }
+    }
+  } ],
+  "paths" : {
+    "/bookings/{user_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /bookings/{user_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /bookings/{user_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "user_name",
+        "in" : "path",
+        "description" : "Generated path parameter for user_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/bookings/{user_name}/{restaurant_name_date_time}" : {
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /bookings/{user_name}/{restaurant_name_date_time}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "user_name",
+        "in" : "path",
+        "description" : "Generated path parameter for user_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      }, {
+        "name" : "restaurant_name_date_time",
+        "in" : "path",
+        "description" : "Generated path parameter for restaurant_name_date_time",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/favorites/{restaurant_name}/{user_name}" : {
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /favorites/{restaurant_name}/{user_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_favorites/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "restaurant_name",
+        "in" : "path",
+        "description" : "Generated path parameter for restaurant_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      }, {
+        "name" : "user_name",
+        "in" : "path",
+        "description" : "Generated path parameter for user_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/favorites/{user_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /favorites/{user_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_favorites/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /favorites/{user_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_favorites/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "user_name",
+        "in" : "path",
+        "description" : "Generated path parameter for user_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/slots/{restaurant_name}/{restaurant_name_date_time}" : {
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /slots/{restaurant_name}/{restaurant_name_date_time}"
+          }
+        },
+        "security" : [ {
+          "lambda_authorizer" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_restaurant_info_avail_slots/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "restaurant_name",
+        "in" : "path",
+        "description" : "Generated path parameter for restaurant_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      }, {
+        "name" : "restaurant_name_date_time",
+        "in" : "path",
+        "description" : "Generated path parameter for restaurant_name_date_time",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/user-profile/{user_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /user-profile/{user_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /user-profile/{user_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "user_name",
+        "in" : "path",
+        "description" : "Generated path parameter for user_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/filterRestaurants/{cuisine}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /filterRestaurants/{cuisine}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_restaurant_info_avail_slots/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "cuisine",
+        "in" : "path",
+        "description" : "Generated path parameter for cuisine",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/restaurants" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /restaurants"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_restaurant_info_avail_slots/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/restaurants/{restaurant_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /restaurants/{restaurant_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_restaurant_info_avail_slots/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "restaurant_name",
+        "in" : "path",
+        "description" : "Generated path parameter for restaurant_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/searchRestaurants/{restaurant_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /searchRestaurants/{restaurant_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_restaurant_info_avail_slots/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "restaurant_name",
+        "in" : "path",
+        "description" : "Generated path parameter for restaurant_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/slots" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /slots"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_restaurant_info_avail_slots/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /slots"
+          }
+        },
+        "security" : [ {
+          "lambda_authorizer" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_restaurant_info_avail_slots/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/slots/{restaurant_name}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /slots/{restaurant_name}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_restaurant_info_avail_slots/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "restaurant_name",
+        "in" : "path",
+        "description" : "Generated path parameter for restaurant_name",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/bookings" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /bookings"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/favorites" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /favorites"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_favorites/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/user-login" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /user-login"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/user-register" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /user-register"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/user-profile" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /user-profile"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/user-profile-image" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /user-profile-image"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:hearty_eats_users_bookings/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    }
+  },
+  "components" : {
+    "securitySchemes" : {
+      "lambda_authorizer" : {
+        "type" : "apiKey",
+        "name" : "Authorization",
+        "in" : "header",
+        "x-amazon-apigateway-authorizer" : {
+          "identitySource" : "$request.header.Authorization",
+          "authorizerUri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:112823250535:function:lambda_authorizer/invocations",
+          "authorizerPayloadFormatVersion" : "2.0",
+          "authorizerResultTtlInSeconds" : 300,
+          "type" : "request",
+          "enableSimpleResponses" : true
+        }
+      }
+    }
+  },
+  "x-amazon-apigateway-cors" : {
+    "allowMethods" : [ "DELETE", "GET", "POST", "PUT" ],
+    "allowHeaders" : [ "authorization" ],
+    "maxAge" : 0,
+    "allowCredentials" : false,
+    "allowOrigins" : [ "http://*", "https://*" ]
+  },
+  "x-amazon-apigateway-importexport-version" : "1.0"
+}

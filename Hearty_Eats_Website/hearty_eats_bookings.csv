@@ -1,0 +1,7 @@
+"user_name","restaurant_name_date_time","contact_number","cuisine","image","number_of_pax"
+"mary123","""Astons, 13-13-2022 10.32:00 PM""","12345678","Western","images/astons.jpg","2 Adults"
+"mary123","""Paradise Dynasty, 12-13-2022 7.32:00 PM""","12345678","Chinese","images/paradise_dynasty.jpg","2 Adults"
+"carolyn123","""Astons, 13-13-2022 10.32:00 PM""","123","Western","images/astons.jpg","2 Adults"
+"carolyn123","""Astons, 13-13-2022 7.32:00 PM""","123","Western","images/astons.jpg","4 Adults"
+"carolyn123","""Paradise Dynasty, 12-13-2022 7.32:00 PM""","123","Chinese","images/paradise_dynasty.jpg","2 Adults"
+"carolyn123","""Paradise Dynasty, 12-13-2022, 9:32:00 PM""","123","Chinese","images/paradise_dynasty.jpg","2 Adults"
