@@ -2,4 +2,29 @@
   - A restaurant reservation website created using AWS services - dyanamoDB, Lambda, API gateway, S3 and Elastic Beanstalk.
   - Coded on VS code using HTML, CSS & Javascript.
 
+# Functionalities 🛠️
+  - User can register for an account and login into their account.
+  - User can view list of available restaurants that they can make reservation at.
+  - They can view more information about the restaurant. There is also a google map API to guide user to restaurant location.
+  - User can make a reservation, view their reservations and delete their reservations. 
+  - User can save restaurants they like by adding it to favorites, they can also delete from favorites.
+  - User can view and edit their profile details including profile picture. 
+  
+  ![image](https://user-images.githubusercontent.com/100062535/227495727-2402bbc5-54ff-4f7f-bdae-58a32107b29f.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227495917-376f4c23-010e-4e45-a1d4-e72fd63ca063.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227496271-e4bbd02e-4c5d-4f5c-a839-fda9847b3f20.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227496358-bce862c3-feb7-4d9b-858a-19d3baa3d50d.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227496569-bd502e74-311c-4f37-8c76-e597ab697ec4.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227496648-13d65646-d211-463e-a7d5-a801d13792e6.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227496737-72c970f2-55ee-428c-ac8a-adc64b8f585f.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227496800-b2b40d36-543c-44e0-baff-f90314d426d9.png)
+  ![image](https://user-images.githubusercontent.com/100062535/227496887-d34e96ce-0c55-44d0-9c2e-aefd82034e9b.png)
+
+
+
+
+
+
+
+
   
