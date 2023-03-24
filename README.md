@@ -12,6 +12,7 @@
   - Users can also visit the about page to learn more about the restaurant reservation website.
   - Admin user can add reservation timing slots for users to book.
   - Admin user can also delete reservation timing slots from selected resstaurant.
+  - Password is needed to enter admin portal (Lambda Authorizer).
   
   ![image](https://user-images.githubusercontent.com/100062535/227495727-2402bbc5-54ff-4f7f-bdae-58a32107b29f.png)
   ![image](https://user-images.githubusercontent.com/100062535/227495917-376f4c23-010e-4e45-a1d4-e72fd63ca063.png)
